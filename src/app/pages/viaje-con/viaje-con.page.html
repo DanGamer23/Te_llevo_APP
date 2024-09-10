@@ -1,0 +1,62 @@
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col size="8">
+        <div class="centrado1">
+          <h1 class="titulo">Te llevo APP</h1>
+        </div>
+        <div class="centrado">
+          <h2 class="subtitulo">Planifica tu viaje:</h2>
+        </div>
+        <div>
+          
+          <ion-list>
+            <ion-item>
+              <ion-input label="Hora de inicio:" (ionInput)="validarInput($event)"  [(ngModel)]="hora"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Punto de inicio" [(ngModel)]="punto"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Valor minimo" (ionInput)="validarInput($event)" [(ngModel)]="valor"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Capacidad:" (ionInput)="validarInput($event)" [(ngModel)]="capacidad"></ion-input>
+            </ion-item>
+          </ion-list>
+        </div>
+        
+        <div class="centrado">
+          <h2 class="subtitulo">Seleccione Destino:</h2>
+        </div>
+
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card>
+    <img alt="mapa" src="assets/icon/mapa.png" />
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <br>
+        <div class="centrado">
+          <ion-button expand="block" class="botones" (click)="noir()">Cancelar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <br>  
+        <div class="centrado">
+          <ion-button expand="block" class="botones"(click)="ir()">Aceptar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
