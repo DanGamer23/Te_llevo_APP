@@ -39,4 +39,8 @@ export class HomePage {
     const input = event.target.value;
     event.target.value = input.replace(/\s+/g, '');
   }
+
+  ir() {
+    this.navCtrl.navigateForward('/recuperar');
+  }
 }

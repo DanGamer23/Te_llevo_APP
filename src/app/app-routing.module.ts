@@ -61,9 +61,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/fin-pas/fin-pas.module').then( m => m.FinPasPageModule)
   },
   {
+    path: 'recuperar',
+    loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/p404/p404.module').then( m => m.P404PageModule)
   },
+
   
 
 ];
